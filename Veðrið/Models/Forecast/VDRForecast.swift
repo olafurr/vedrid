@@ -9,8 +9,9 @@
 import Foundation
 
 struct VDRForecast {
-  
     var time: NSDate?;
-    
-    
+    var windSpeed: NSNumber?;
+    var windDirection: String?;
+    var weatherDescription: String?;
+    var totalRain: NSNumber?;
 }

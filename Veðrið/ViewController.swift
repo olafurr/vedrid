@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         
         VDRWeatherAPI.sharedInstance.getWeather([1]).subscribeNext { result in
             if let forecasts = result {
-                print(forecasts);
+//                print(forecasts);
             }
         }
         

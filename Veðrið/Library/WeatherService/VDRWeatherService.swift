@@ -68,7 +68,14 @@ class VDRWeatherAPI: NSObject {
             request.responseData { response in
                 
                 if (response.result.isSuccess) {
-                    let xml = SWXMLHash.parse(response.result.value!);
+                    let xml = SWXMLHash.lazy(response.result.value!);
+                    
+                    let forecasts: [VDRForecast] = xml["forecasts"]["station"]["forecast"].all.map({ elem in
+                        var forecast = VDRForecast();
+                        forecast.weatherDescription = elem["W"].element!.text;
+                        return forecast;
+                    });
+                    
                     subscriber.sendNext(xml["forecasts"].element);
                     subscriber.sendCompleted();
                 } else {
