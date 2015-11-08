@@ -9,9 +9,14 @@
 import Foundation
 
 struct VDRForecast {
-    var time: NSDate?;
-    var windSpeed: NSNumber?;
-    var windDirection: String?;
-    var weatherDescription: String?;
-    var totalRain: NSNumber?;
+    
+    var forecastItems: [VDRWeatherItem]?;
+    var stationName: String?;
+    
+    init(items: [VDRWeatherItem]?, stationName: String?) {
+        self.forecastItems = items;
+        self.stationName = stationName;
+    }
+
+    
 }

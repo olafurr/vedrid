@@ -20,6 +20,8 @@
 		18DAB2941BE9614D009BB984 /* Ve_ri_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DAB2931BE9614D009BB984 /* Ve_ri_Tests.swift */; };
 		18DAB29F1BE9614D009BB984 /* Ve_ri_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DAB29E1BE9614D009BB984 /* Ve_ri_UITests.swift */; };
 		18DAB2B11BE96564009BB984 /* VDRWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DAB2B01BE96564009BB984 /* VDRWeatherService.swift */; };
+		18E43C111BED6D9E00DCDD06 /* VDRWeatherItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E43C101BED6D9E00DCDD06 /* VDRWeatherItem.swift */; };
+		18E43C131BED6DC500DCDD06 /* VDRObservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E43C121BED6DC500DCDD06 /* VDRObservation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		18DAB29E1BE9614D009BB984 /* Ve_ri_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ve_ri_UITests.swift; sourceTree = "<group>"; };
 		18DAB2A01BE9614D009BB984 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18DAB2B01BE96564009BB984 /* VDRWeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VDRWeatherService.swift; sourceTree = "<group>"; };
+		18E43C101BED6D9E00DCDD06 /* VDRWeatherItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VDRWeatherItem.swift; sourceTree = "<group>"; };
+		18E43C121BED6DC500DCDD06 /* VDRObservation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VDRObservation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 		18A796351BEAC8B700A433AC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				18E43C0E1BED6D9300DCDD06 /* Observation */,
+				18E43C0F1BED6D9300DCDD06 /* WeatherItem */,
 				18A796361BEAC8B700A433AC /* Forecast */,
 			);
 			path = Models;
@@ -193,6 +199,22 @@
 				18DAB2B01BE96564009BB984 /* VDRWeatherService.swift */,
 			);
 			path = WeatherService;
+			sourceTree = "<group>";
+		};
+		18E43C0E1BED6D9300DCDD06 /* Observation */ = {
+			isa = PBXGroup;
+			children = (
+				18E43C121BED6DC500DCDD06 /* VDRObservation.swift */,
+			);
+			path = Observation;
+			sourceTree = "<group>";
+		};
+		18E43C0F1BED6D9300DCDD06 /* WeatherItem */ = {
+			isa = PBXGroup;
+			children = (
+				18E43C101BED6D9E00DCDD06 /* VDRWeatherItem.swift */,
+			);
+			path = WeatherItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,8 +372,10 @@
 			files = (
 				18DAB2811BE9614D009BB984 /* ViewController.swift in Sources */,
 				18DAB2B11BE96564009BB984 /* VDRWeatherService.swift in Sources */,
+				18E43C111BED6D9E00DCDD06 /* VDRWeatherItem.swift in Sources */,
 				18DAB27F1BE9614D009BB984 /* AppDelegate.swift in Sources */,
 				18A796381BEAC8C600A433AC /* VDRForecast.swift in Sources */,
+				18E43C131BED6DC500DCDD06 /* VDRObservation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

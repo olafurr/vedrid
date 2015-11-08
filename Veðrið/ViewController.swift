@@ -14,13 +14,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        VDRWeatherAPI.sharedInstance.getWeather([1]).subscribeNext { result in
-            if let forecasts = result {
-//                print(forecasts);
+        VDRWeatherAPI.sharedInstance.getObservation([1]).start { data in
+            if data.error != nil {
+                print("Error: " + (data.error?.localizedDescription)!);
+            } else {
+                print(data.value);
             }
         }
         
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
 }
 
